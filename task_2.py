@@ -1,9 +1,9 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
 class Clothes:
     @abstractmethod
-    def fabric_count(self):
+    def fabric_count(self, *args):
         pass
 
 
