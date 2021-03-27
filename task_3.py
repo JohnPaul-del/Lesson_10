@@ -1,5 +1,6 @@
 from textwrap import fill
 
+
 class Cell:
     def __init__(self, cell):
         self.cell = cell

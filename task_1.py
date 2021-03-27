@@ -7,14 +7,14 @@ class Matrix:
             return Matrix([[self.matrix[i][j] + other.matrix[i][j] for j in range(len(self.matrix[0]))]
                            for i in range(len(self.matrix))])
         else:
-            pass
+            return f"\033[31m {'Math error. Need matrices of the same size'}"
 
     def __str__(self):
-        return '\n'.join(str(i) for i in self.matrix)
+        return str('\n'.join(['\t'.join([str(j) for j in i]) for i in self.matrix]))
 
 
 matrix_1 = Matrix([[11, 15, 1], [34, 43, 23], [100, 54, 1]])
-matrix_2 = Matrix([[1, 4, 7], [44, 51, 15], [76, 25, 90]])
+matrix_2 = Matrix([[1, 4], [44, 51], [76, 25]])
 
 matrix_3 = matrix_1 + matrix_2
 print(f"{'*'*30} First Matrix {'*'*30}\n{matrix_1}")
